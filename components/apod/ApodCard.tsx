@@ -28,7 +28,7 @@ export default function ApodCard({ data }: ApodCardProps) {
     const [cardHeight, setCardHeight] = useState('250px');
 
     useEffect(() => {
-        if(expanded) {
+        if (expanded) {
             setCardHeight('100%');
         } else {
             setTimeout(() => {
@@ -56,7 +56,7 @@ export default function ApodCard({ data }: ApodCardProps) {
                     </ExpandMore>
                 }
                 title={data.title}
-                subheader={`${data.date} ${data.copyright && `© ${data.copyright}`}`}
+                subheader={`${data.date} ${data.copyright ? `© ${data.copyright}` : ''}`}
             />
             <CardMedia
                 component="img"
